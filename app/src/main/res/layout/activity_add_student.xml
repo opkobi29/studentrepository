@@ -7,25 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".AddStudentActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="428dp"
-        android:layout_height="278dp"
-        android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/avatar" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="30dp"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        tools:layout_editor_absoluteY="308dp" />
 
     <EditText
         android:id="@+id/add_student_activity_name_edit_text"
@@ -95,4 +84,12 @@
         app:layout_constraintBottom_toTopOf="@+id/add_student_activity_save_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="403dp"
+        android:layout_height="288dp"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="-6dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
 </androidx.constraintlayout.widget.ConstraintLayout>
