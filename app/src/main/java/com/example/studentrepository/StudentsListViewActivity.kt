@@ -62,25 +62,26 @@ class StudentsListViewActivity : AppCompatActivity() {
                         }
                     }
                 }
+            }
                 val student = students?.get(position)
-                val nameTextView: TextView = view.findViewById(R.id.list_row_username)
-                val idTextView: TextView = view.findViewById(R.id.list_row_userid)
+                val nameTextView: TextView? = view?.findViewById(R.id.list_row_username)
+                val idTextView: TextView? = view?.findViewById(R.id.list_row_userid)
+                val checkbox: CheckBox? = view?.findViewById(R.id.list_row_checkbox)
 
 
+                nameTextView?.text = student?.name
+                idTextView?.text = student?.id
+                checkbox?.isChecked = student?.isChecked ?: false
 
-                nameTextView.text = student?.name
-                idTextView.text = student?.id
-                checkbox.isChecked = student?.isChecked ?: false
-
-                checkbox.apply {
+                checkbox?.apply {
                     isChecked = student?.isChecked ?: false
                     tag = position
                 }
 
 
-
+                return view!!
             }
-            return view!!
-        }
+
+
     }
 }
