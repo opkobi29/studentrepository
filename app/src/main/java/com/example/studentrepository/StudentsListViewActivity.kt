@@ -24,7 +24,7 @@ class StudentsListViewActivity : AppCompatActivity() {
             insets
         }
         val listView: ListView? = findViewById(R.id.students_list_view)
-        listView.adapter = StudentAdapter()
+        listView!!.adapter = StudentAdapter()
     }
     class StudentAdapter(): BaseAdapter() {
         override fun getCount(): Int =10
