@@ -9,6 +9,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.view.LayoutInflater
+
 
 class StudentsListViewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +37,9 @@ class StudentsListViewActivity : AppCompatActivity() {
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            TODO("Not yet implemented")
+            val inflater = LayoutInflater.from(parent?.context)
+            val view = convertView ?: inflater.inflate(R.layout.list_row, parent, false)
+            return view
         }
     }
 }
